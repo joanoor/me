@@ -12,9 +12,16 @@ export default defineNuxtConfig({
     '@ivy/form': "/libs/form",
     '@ivy/request': "/libs/request",
   },
+  css: [
+    '@unocss/reset/normalize.css',
+    '@/assets/styles/main.scss',
+    '@/assets/styles/component/index.scss',
+  ],
+  runtimeConfig: {
+    seniverse_private: 'Stl1vDvwlPay5Q3bi'
+  },
 
   vite: {
-
     css: {
       preprocessorOptions: {
         scss: {
