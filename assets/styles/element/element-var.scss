@@ -1,0 +1,143 @@
+@use '../modules/variables' as *;
+
+:root {
+  color-scheme: light !important;
+  --el-color-white: #ffffff !important;
+  --el-color-black: #000000 !important;
+  --el-color-primary: #{$c-cyan-6} !important;
+  --el-color-primary-light-3: #{$c-cyan-5} !important;
+  --el-color-primary-light-5: #{$c-cyan-3} !important;
+  --el-color-primary-light-7: #{$c-cyan-2} !important;
+  --el-color-primary-light-8: #{$c-cyan-1} !important;
+  --el-color-primary-light-9: #ecf5ff !important;
+  --el-color-primary-dark-2: #{$c-cyan-7} !important;
+
+  --el-color-success: #{$c-success-6} !important;
+  --el-color-success-light-3: #{$c-success-5} !important;
+  --el-color-success-light-5: #{$c-success-3} !important;
+  --el-color-success-light-7: #{$c-success-2} !important;
+  --el-color-success-light-8: #{$c-success-1} !important;
+  --el-color-success-light-9: #f0f9eb !important;
+  --el-color-success-dark-2: #{$c-success-7} !important;
+
+  --el-color-warning: #{$c-warn-6} !important;
+  --el-color-warning-light-3: #{$c-warn-5} !important;
+  --el-color-warning-light-5: #{$c-warn-3} !important;
+  --el-color-warning-light-7: #{$c-warn-2} !important;
+  --el-color-warning-light-8: #{$c-warn-1} !important;
+  --el-color-warning-light-9: #fdf6ec !important;
+  --el-color-warning-dark-2: #{$c-warn-7} !important;
+
+  --el-color-info: #{$c-fill-2} !important;
+  --el-color-info-light-3: #b1b3b8;
+  --el-color-info-light-5: #c8c9cc;
+  --el-color-info-light-7: #dedfe0;
+  --el-color-info-light-8: #e9e9eb;
+  --el-color-info-light-9: #f4f4f5;
+  --el-color-danger-dark-2: #c45656 !important;
+
+  --el-color-error: #{$c-error-6} !important;
+  --el-color-error-light-3: #{$c-error-5} !important;
+  --el-color-error-light-5: #{$c-error-3} !important;
+  --el-color-error-light-7: #{$c-error-2} !important;
+  --el-color-error-light-8: #{$c-error-1} !important;
+  --el-color-error-light-9: #fef0f0 !important;
+  --el-color-error-dark-2: #c45656 !important;
+
+  --el-bg-color: #ffffff !important;
+  --el-bg-color-page: #f2f3f5 !important;
+  --el-bg-color-overlay: #ffffff !important;
+  --el-text-color-primary: #{$c-text-5} !important;
+  --el-text-color-regular: #{$c-text-4} !important;
+  --el-text-color-secondary: #{$c-text-3} !important;
+  --el-text-color-placeholder: #{$c-text-2} !important;
+  --el-text-color-disabled: #c0c4cc !important;
+  --el-border-color: #dcdfe6 !important;
+  --el-border-color-light: #e4e7ed !important;
+  --el-border-color-lighter: #ebeef5 !important;
+  --el-border-color-extra-light: #f2f6fc !important;
+  --el-border-color-dark: #d4d7de !important;
+  --el-border-color-darker: #cdd0d6 !important;
+  --el-fill-color: #f0f2f5 !important;
+  --el-fill-color-light: #f5f7fa !important;
+  --el-fill-color-lighter: #fafafa !important;
+  --el-fill-color-extra-light: #fafcff !important;
+  --el-fill-color-dark: #ebedf0 !important;
+  --el-fill-color-darker: #e6e8eb !important;
+  --el-fill-color-blank: #ffffff !important;
+  --el-box-shadow: 0px 12px 32px 4px rgba(0, 0, 0, 0.04), 0px 8px 20px rgba(0, 0, 0, 0.08) !important;
+  --el-box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.12) !important;
+  --el-box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.12) !important;
+  --el-box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.08), 0px 12px 32px rgba(0, 0, 0, 0.12), 0px 8px 16px -8px rgba(0, 0, 0, 0.16) !important;
+  --el-disabled-bg-color: var(--el-fill-color-light) !important;
+  --el-disabled-text-color: var(--el-text-color-placeholder) !important;
+  --el-disabled-border-color: var(--el-border-color-light) !important;
+  --el-overlay-color: rgba(0, 0, 0, 0.8) !important;
+  --el-overlay-color-light: rgba(0, 0, 0, 0.7) !important;
+  --el-overlay-color-lighter: rgba(0, 0, 0, 0.5) !important;
+  --el-mask-color: rgba(255, 255, 255, 0.9) !important;
+  --el-mask-color-extra-light: rgba(255, 255, 255, 0.3) !important;
+  --el-border-width: 1px !important;
+  --el-border-style: solid !important;
+  --el-border-color-hover: var(--el-text-color-disabled) !important;
+  --el-border: var(--el-border-width) var(--el-border-style) var(--el-border-color) !important;
+  --el-svg-monochrome-grey: var(--el-border-color) !important;
+}
+
+:root {
+  --el-menu-active-color: var(--el-color-primary) !important;
+  --el-menu-text-color: var(--el-text-color-primary) !important;
+  --el-menu-hover-text-color: var(--el-color-primary) !important;
+  --el-menu-bg-color: var(--el-fill-color-blank) !important;
+  --el-menu-hover-bg-color: var(--el-color-primary-light-9) !important;
+  --el-menu-item-height: 56px !important;
+  --el-menu-sub-item-height: calc(var(--el-menu-item-height) - 6px) !important;
+  --el-menu-horizontal-sub-item-height: 36px !important;
+  --el-menu-item-font-size: var(--el-font-size-base) !important;
+  --el-menu-item-hover-fill: var(--el-color-primary-light-9) !important;
+  --el-menu-border-color: var(--el-border-color) !important;
+  --el-menu-base-level-padding: 20px !important;
+  --el-menu-level-padding: 20px !important;
+  --el-menu-icon-width: 24px !important;
+}
+
+:root {
+  --el-color-white: #ffffff !important;
+  --el-color-black: #000000 !important;
+  --el-color-primary-rgb: 64, 158, 255 !important;
+  --el-color-success-rgb: 103, 194, 58 !important;
+  --el-color-warning-rgb: 230, 162, 60 !important;
+  --el-color-danger-rgb: 245, 108, 108 !important;
+  --el-color-error-rgb: 245, 108, 108 !important;
+  --el-color-info-rgb: 144, 147, 153 !important;
+  --el-font-size-extra-large: 20px !important;
+  --el-font-size-large: 18px !important;
+  --el-font-size-medium: 16px !important;
+  --el-font-size-base: 14px !important;
+  --el-font-size-small: 13px !important;
+  --el-font-size-extra-small: 12px !important;
+  --el-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif !important;
+  --el-font-weight-primary: 500 !important;
+  --el-font-line-height-primary: 24px !important;
+  --el-index-normal: 1 !important;
+  --el-index-top: 1000 !important;
+  --el-index-popper: 2000 !important;
+  --el-border-radius-base: 4px !important;
+  --el-border-radius-small: 2px !important;
+  --el-border-radius-round: 20px !important;
+  --el-border-radius-circle: 100% !important;
+  --el-transition-duration: 0.3s !important;
+  --el-transition-duration-fast: 0.2s !important;
+  --el-transition-function-ease-in-out-bezier: cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  --el-transition-function-fast-bezier: cubic-bezier(0.23, 1, 0.32, 1) !important;
+  --el-transition-all: all var(--el-transition-duration) var(--el-transition-function-ease-in-out-bezier) !important;
+  --el-transition-fade: opacity var(--el-transition-duration) var(--el-transition-function-fast-bezier) !important;
+  --el-transition-md-fade: transform var(--el-transition-duration) var(--el-transition-function-fast-bezier), opacity var(--el-transition-duration) var(--el-transition-function-fast-bezier) !important;
+  --el-transition-fade-linear: opacity var(--el-transition-duration-fast) linear !important;
+  --el-transition-border: border-color var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier) !important;
+  --el-transition-box-shadow: box-shadow var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier) !important;
+  --el-transition-color: color var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier) !important;
+  --el-component-size-large: 40px !important;
+  --el-component-size: 32px !important;
+  --el-component-size-small: 24px !important;
+}

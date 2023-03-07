@@ -1,0 +1,22 @@
+%dropdown {
+  .el-dropdown-menu {
+    padding: 0;
+
+    .el-dropdown-menu__item {
+      cursor: auto;
+      padding: 0
+    }
+  }
+}
+
+.el-popper.caution {
+  --el-dropdown-menuItem-hover-color: none !important;
+  --el-dropdown-menuItem-hover-fill: none !important;
+  --el-dropdown-menu-box-shadow: none !important;
+
+  @extend %dropdown;
+}
+
+.notice {
+  @extend %dropdown;
+}

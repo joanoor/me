@@ -1,0 +1,3 @@
+@function get-theme($theme) {
+  @return if($theme=='light', red, blue)
+}

@@ -1,0 +1,17 @@
+.search-form {
+
+  // 一行有三个
+  .el-form-item {
+    width: calc((100% - 36px) / 3);
+  }
+
+  /**
+    css选择器是从右向左匹配的，那么上面这个是什么意思呢？nth-last-child(-n+3)选择的是容器中的最后3个元素，nth-child(3n+1)选择第（3n+1）个元素，也就是第一列的元素（因为每行展示3个元素，多以两种选择都合3有关），两者的交集恰好就是最后一行的第一个元素，也就是左下角的这个元素。但是最后一行的元素个数也并不确定，为了完整的匹配到其后的元素，我们使用通用兄弟选择器~来选中该目标后面的兄弟元素，这样两者结合便可以保证总是找全最后一行的元素，而不用管该行是否占满。
+
+    链接：https://juejin.cn/post/6895651857411899399
+   */
+  .el-form-item:nth-child(3n+1):nth-last-child(-n+3),
+  .el-form-item:nth-child(3n+1):nth-last-child(-n+3)~.el-form-item {
+    margin-bottom: 0;
+  }
+}

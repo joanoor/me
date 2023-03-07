@@ -1,0 +1,26 @@
+/* 
+ * 滚动条 😊 2022/11/17
+ */
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  // &::-webkit-scrollbar-track {
+  //   background: rgba(144, 147, 153);
+  //   border-radius: 2px;
+  // }
+  &::-webkit-scrollbar-thumb {
+    background: rgb(204, 206, 209);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(227, 229, 231, 0.8);
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: #179a16;
+  }
+}

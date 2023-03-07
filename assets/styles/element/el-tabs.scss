@@ -1,0 +1,25 @@
+.el-tabs {
+  --el-tabs-header-height: 44px !important;
+}
+
+.el-tabs__header {
+  margin: 0 !important;
+}
+
+.el-tabs__nav-wrap::after {
+  background-color: transparent !important;
+}
+
+
+.el-tabs__item {
+  padding: 0 !important;
+
+  &:not(.is-active) {
+    color: $c-text-4 !important;
+
+  }
+
+  &:not(:last-child) {
+    margin-right: 32px !important;
+  }
+}

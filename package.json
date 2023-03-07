@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "@unocss/nuxt": "^0.50.4",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.9.0",
+    "nuxt": "^3.2.3",
+    "nuxt-icon": "^0.3.2",
+    "prettier": "^2.8.4",
+    "sass": "^1.58.3"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.7",
+    "@vueuse/nuxt": "^9.13.0"
+  }
+}

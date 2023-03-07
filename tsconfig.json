@@ -1,0 +1,26 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@ivy/core": [
+        "/libs/core"
+      ],
+      "@ivy/chart": [
+        "/libs/chart"
+      ],
+      "@ivy/request": [
+        "/libs/request"
+      ],
+      "@ivy/form": [
+        "/libs/form"
+      ],
+      "@ivy/cache": [
+        "/libs/cache"
+      ],
+      "@ivy/cipher": [
+        "/libs/cipher"
+      ]
+    }
+  }
+}
