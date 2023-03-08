@@ -18,7 +18,12 @@ export default defineNuxtConfig({
     '@/assets/styles/component/index.scss',
   ],
   runtimeConfig: {
-    seniverse_private: 'Stl1vDvwlPay5Q3bi'
+    public: {
+      seniverse_private: 'Stl1vDvwlPay5Q3bi',
+      gd_private: 'a1d75804c5e1df6a07e15888d31a8ea7',
+      // tx_private: 'CDDBZ-FBNH2-XCYUZ-CB74S-PK35F-4ABJK',
+      
+    }
   },
 
   vite: {

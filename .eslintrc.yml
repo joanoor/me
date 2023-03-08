@@ -7,12 +7,15 @@ extends:
   - plugin:vue/vue3-essential
   - plugin:@typescript-eslint/recommended
   - plugin:prettier/recommended
-overrides: []
-parser: '@typescript-eslint/parser'
+parser: 'vue-eslint-parser'
 parserOptions:
   ecmaVersion: latest
+  parser:
+    js: 'espree'
+    ts: '@typescript-eslint/parser'
   sourceType: module
 plugins:
   - vue
   - '@typescript-eslint'
-rules: {}
+rules:
+  'vue/multi-word-component-names': 'off'

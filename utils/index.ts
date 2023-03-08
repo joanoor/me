@@ -1,0 +1,1 @@
+export const hasSupportGeo = (): boolean => Boolean('geolocation' in navigator);
