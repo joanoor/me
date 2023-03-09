@@ -6,6 +6,8 @@
 
 <script setup lang="ts">
 import { GDIp, Result, ResultLast5DayStruct } from '../types';
+import midpoint from '@turf/midpoint'
+import { points, Point, Feature } from '@turf/helpers'
 
 definePageMeta({
   layout: false
@@ -17,9 +19,9 @@ const data = reactive({
 
 const config = useRuntimeConfig()
 
-const onSuccess = (position: GeolocationPosition) => {
+const onSuccess = ({coords}: GeolocationPosition) => {
   console.log('Success retrieve your location')
-  getWeather(`${position.coords.latitude}:${position.coords.longitude}`)
+  getWeather(`${coords.longitude.toFixed(2)},${coords.latitude.toFixed(2)}`)
 }
 
 const onError = () => {
@@ -30,16 +32,24 @@ const onError = () => {
 // 通过腾讯接口获取用户经纬度
 const getUserLatInt = async () => {
   const { data: dataAmap } = await useFetch<GDIp>(`https://restapi.amap.com/v3/ip?key=${config.public.gd_private}`)
-  getWeather(dataAmap.value?.city || '')
-  getSunStatus((dataAmap.value?.city || ''))
+  const aPoints = dataAmap.value?.rectangle.split(';')
+  let tmpPoints:[number,number][]=[]
+  if (aPoints) {
+    aPoints.forEach(v => {
+      tmpPoints.push(v.split(',').map(v2=>+v2) as [number,number])
+    })
+    const { features } = points(tmpPoints)
+    const {geometry:{coordinates}}=midpoint(features[0],features[0])
+    getWeather(`${coordinates[0].toFixed(2)},${coordinates[1].toFixed(2)}`)
+  }
 }
 
 
-// 通过知心天气api获取最近5天的天气
-const getWeather = async (location: string) => {
-  const { data: weatherData } = await useFetch<Result<ResultLast5DayStruct[]>>(`https://api.seniverse.com/v3/weather/daily.json?key=${config.public.seniverse_private}&location=${location}&language=zh-Hans&unit=c&start=0&days=5`)
+// 通过知心天气api获取最新天气实况
+const getWeather = async (city: string) => {
+  const { data: weatherData } = await useFetch<Result<ResultLast5DayStruct[]>>(`https://api.qweather.com/v7/weather/now?key=${config.public.qWeather_private}&location=${city}`)
 
-  data.weather = weatherData.value?.results[0]
+  // data.weather = weatherData.value?.results[0]
 }
 
 const getSunStatus = async (location: string) => {
