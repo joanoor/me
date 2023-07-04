@@ -1,0 +1,24 @@
+@mixin text-cn-regular {
+  font-weight: 500;
+  font-family: PingFang SC, PingFang SC-Medium;
+}
+
+@mixin text-cn-medium {
+  font-weight: 500;
+  font-family: PingFang SC, PingFang SC-Medium;
+}
+
+@mixin text-en-regular {
+  font-weight: 500;
+  font-family: Nunito Sans, Nunito Sans-Bold;
+}
+
+@mixin text-en-medium {
+  font-weight: 500;
+  font-family: Nunito Sans, Nunito Sans-Bold;
+}
+
+@mixin linear-gradient($direction, $gradients...) {
+  // background-color: nth($gradients, 1);
+  background-image: linear-gradient($direction, $gradients);
+}
