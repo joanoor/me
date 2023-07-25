@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   ],
   css: [
     '@unocss/reset/normalize.css',
+    '@fortawesome/fontawesome-svg-core/styles.css',
     '~/styles/main.scss'
   ],
   vite: {
